@@ -1,0 +1,20 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor-local files
+*.swp
+*.swo
+.idea/
+
+# Logs
+*.log
+
+# Environment files (none expected for this static site, ignored defensively)
+.env
+.env.local
+.env.*.local
+
+# Node tooling (not currently used, ignored defensively if ever introduced)
+node_modules/
