@@ -43,7 +43,7 @@ const translations = {
     elsewhereCta: 'Explorar portfolio →',
     endMarker: 'Contacto',
     endBody: 'Si querés hablar sobre una oportunidad, un proyecto o intercambiar ideas:',
-    footerLine: 'Buenos Aires, Argentina · Disponible para equipos remotos e internacionales'
+    footerLine: 'Buenos Aires, Argentina · Inglés C2 (EF SET 76/100) · Disponible para equipos remotos e internacionales'
   },
   en: {
     skipLink: 'Skip to main content',
@@ -89,7 +89,7 @@ const translations = {
     elsewhereCta: 'Explore portfolio →',
     endMarker: 'Contact',
     endBody: "If you'd like to talk about an opportunity, a project, or just exchange ideas:",
-    footerLine: 'Buenos Aires, Argentina · Open to remote and international teams'
+    footerLine: 'Buenos Aires, Argentina · C2 English (EF SET 76/100) · Open to remote and international teams'
   }
 };
 
