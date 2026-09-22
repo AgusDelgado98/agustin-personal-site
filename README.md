@@ -42,7 +42,7 @@ Ninguno de estos elementos representa datos medidos reales — son abstracciones
 - Portfolio: `https://portfolio-me-f104.vercel.app/`
 - LinkedIn: `https://www.linkedin.com/in/agustin-delgado-data98615190/`
 - GitHub: `https://github.com/AgusDelgado98`
-- CV: `assets/Agustin_Delgado_CV_2026.pdf` (mismo archivo para ES y EN)
+- CV: `https://portfolio-me-f104.vercel.app/cv/Agustin_Delgado_CV_EN.pdf` (fuente canónica única; mismo archivo para ES y EN)
 - Contacto: `mailto:augusto.delgado00@hotmail.com`
 
 ## Videos
