@@ -2,39 +2,45 @@
 
 Sitio personal de Agustín Delgado. No es un portfolio ni una demo técnica — esa evidencia ya vive en otros lugares (portfolio, GitHub, LinkedIn, CV). Este sitio responde algo distinto: quién es profesionalmente, cómo piensa, y qué tipo de problemas le interesan.
 
-Pensado como una libreta personal de alguien que trabaja con datos, no como una landing tratando de demostrar competencia técnica.
+Diseño editorial (verde profundo, grafito, marfil y acentos dorados) organizado en tres vistas: Inicio, Sobre mí e Intereses y pensamiento.
 
 ## Arquitectura
 
 - HTML + CSS + JavaScript vanilla. Sin build step, sin frameworks, sin dependencias de runtime.
 - Único punto de entrada: `index.html`, estilos en `styles.css`, comportamiento en `script.js`.
-- Página compacta (~2-3 scrolls de escritorio después del hero), sin secciones interminables.
+- Tres vistas (`#inicio`, `#sobre-mi`, `#intereses`) dentro de la misma página: un router liviano en `script.js` muestra/oculta las secciones `.view` según el hash de la URL (sin recarga, con soporte de atrás/adelante del navegador) y mueve el foco al heading de la vista para usuarios de teclado/lector de pantalla.
 - Fuentes vía Google Fonts (`preconnect` + `<link>`); ningún otro recurso remoto.
 
 ## Idiomas (ES/EN)
 
-- Switch ES/EN en el header, sin recargar la página.
-- Todo el texto vive en el objeto `translations` de `script.js` (`data-i18n` / `data-i18n-aria`).
+- Switch ES/EN en el header y en el footer, sin recargar la página.
+- Todo el texto vive en el objeto `translations` de `script.js` (`data-i18n` / `data-i18n-html` / `data-i18n-aria` / `data-i18n-alt`).
 - La preferencia de idioma se persiste en `localStorage`.
 - Los destinos de los enlaces (Portfolio, LinkedIn, GitHub, CV, contacto) no cambian entre idiomas — solo la etiqueta visible.
 
+## Fotografía
+
+- `assets/agustin-photo.jpg` es la foto profesional (LinkedIn) sin ningún tipo de alteración: sin recorte, sin filtros, sin corrección de color ni degradés. Se reutiliza tal cual tanto en el Hero de Inicio (tarjeta cuadrada) como en Sobre mí (avatar circular pequeño).
+- Toda la integración visual (brillo ambiental, marco desfasado, máscara circular del avatar) se resuelve a nivel de contenedor en CSS, nunca tocando los píxeles de la imagen.
+
 ## Sistemas visuales (datos como lenguaje visual, no como métrica)
 
-Máximo tres ideas interactivas/visuales en toda la página, todas con SVG nativo (sin librerías):
+Todos con SVG nativo (sin librerías):
 
 1. **Hero — campo de puntos**: un campo abstracto y sutil detrás del hero que reacciona levemente al puntero (sin física, sin ruido visual). Se omite por completo con `prefers-reduced-motion`.
-2. **Trayectoria**: una transición visual única (no tarjetas) que representa Operaciones → Datos → Applied AI como un cambio de carácter en la distribución de puntos.
-3. **Cómo trabajo — scatter conceptual**: cinco ideas (Entender, Preguntar, Estructurar, Validar, Construir) distribuidas en un espacio conceptual. Al pasar el mouse, enfocar con teclado o tocar en móvil, se revela una frase breve y se resaltan las relaciones cercanas.
+2. **Mi recorrido** (Inicio): una transición visual única (no tarjetas) que representa Operaciones → Analítica de datos → Ciencia de Datos e IA como un cambio de carácter en la distribución de puntos.
+3. **Intereses y pensamiento**: cinco ideas (Problemas reales, Experimentación, Modelado, IA con propósito, Impacto) en una lista accesible con panel de detalle y una constelación decorativa de fondo. Al pasar el mouse, enfocar con teclado o tocar en móvil, se revela una frase breve.
 
 Ninguno de estos elementos representa datos medidos reales — son abstracciones conceptuales.
 
 ## Accesibilidad
 
 - Skip link al contenido principal.
-- Los nodos del scatter de "Cómo trabajo" son botones nativos: alcanzables por teclado, con `aria-pressed`, y su contenido no depende exclusivamente del hover (mouse, teclado y touch disparan la misma revelación).
+- Los nodos de "Intereses y pensamiento" son botones nativos: alcanzables por teclado, con `aria-pressed`, y su contenido no depende exclusivamente del hover (mouse, teclado y touch disparan la misma revelación).
 - Menú móvil con `aria-expanded`, cierre con `Escape` y al hacer click afuera.
+- Al cambiar de vista, el foco se mueve al `<h1>` de la vista (con `tabindex="-1"`) y el nav marca `aria-current="page"` en el enlace activo.
 - Enlaces reales (LinkedIn, Portfolio, GitHub, CV, contacto) son `<a>` nativos, alcanzables por teclado.
-- `prefers-reduced-motion` desactiva el campo de puntos del hero y el trazado animado de la trayectoria.
+- `prefers-reduced-motion` desactiva el campo de puntos del hero y el trazado animado de "Mi recorrido".
 - Foco visible global vía `:focus-visible`. SVGs puramente decorativos llevan `aria-hidden="true"`.
 
 ## Rutas de producción
@@ -42,7 +48,7 @@ Ninguno de estos elementos representa datos medidos reales — son abstracciones
 - Portfolio: `https://portfolio-me-f104.vercel.app/`
 - LinkedIn: `https://www.linkedin.com/in/agustin-delgado-data98615190/`
 - GitHub: `https://github.com/AgusDelgado98`
-- CV: `https://portfolio-me-f104.vercel.app/cv/Agustin_Delgado_CV_EN.pdf` (fuente canónica única; mismo archivo para ES y EN)
+- CV: `https://portfolio-me-f104.vercel.app/cv/Agustin-Delgado-2026.pdf` (fuente canónica única; mismo archivo para ES y EN)
 - Contacto: `mailto:augusto.delgado00@hotmail.com`
 
 ## Videos
