@@ -39,7 +39,7 @@ const translations = {
 
     aboutHeading: 'Sobre mí',
     aboutSubtitle: 'Trayectoria, formación y la mirada que me trajo hasta acá.',
-    aboutPhotoAlt: 'Agustín Delgado',
+    aboutStoryMarker: 'Trayectoria',
     aboutStoryTitle: 'Mi historia, en contexto',
     aboutStoryP1: 'Comencé en el mundo laboral en operaciones y gestión, donde aprendí a entender procesos, personas y problemas reales.',
     aboutStoryP2: 'Con el tiempo, el análisis de datos me permitió transformar esa experiencia en información útil para la toma de decisiones.',
@@ -106,7 +106,7 @@ const translations = {
 
     aboutHeading: 'About me',
     aboutSubtitle: 'Background, training and the perspective that brought me here.',
-    aboutPhotoAlt: 'Agustín Delgado',
+    aboutStoryMarker: 'Background',
     aboutStoryTitle: 'My story, in context',
     aboutStoryP1: 'I started out in operations and management, where I learned to understand real processes, people and problems.',
     aboutStoryP2: 'Over time, data analysis let me turn that experience into information useful for decision-making.',
