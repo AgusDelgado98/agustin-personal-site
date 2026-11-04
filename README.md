@@ -20,8 +20,8 @@ Diseño editorial (verde profundo, grafito, marfil y acentos dorados) organizado
 
 ## Fotografía
 
-- `assets/agustin-photo.jpg` (hero, Inicio) y `assets/agustin-photo-about.jpg` (Sobre mí) parten de la misma foto real, sin alterar rasgos faciales.
-- Tratamiento aplicado: recorte fotográfico auténtico, corrección leve de color/contraste y un degradé (vignette) generado en CSS/Pillow que funde el fondo original (desordenado) hacia el verde de marca — sin reconstrucción de rostro por IA.
+- `assets/agustin-photo.jpg` es la foto profesional (LinkedIn) sin ningún tipo de alteración: sin recorte, sin filtros, sin corrección de color ni degradés. Se reutiliza tal cual tanto en el Hero de Inicio (tarjeta cuadrada) como en Sobre mí (avatar circular pequeño).
+- Toda la integración visual (brillo ambiental, marco desfasado, máscara circular del avatar) se resuelve a nivel de contenedor en CSS, nunca tocando los píxeles de la imagen.
 
 ## Sistemas visuales (datos como lenguaje visual, no como métrica)
 
@@ -48,7 +48,7 @@ Ninguno de estos elementos representa datos medidos reales — son abstracciones
 - Portfolio: `https://portfolio-me-f104.vercel.app/`
 - LinkedIn: `https://www.linkedin.com/in/agustin-delgado-data98615190/`
 - GitHub: `https://github.com/AgusDelgado98`
-- CV: `https://portfolio-me-f104.vercel.app/cv/Agustin_Delgado_CV_EN.pdf` (fuente canónica única; mismo archivo para ES y EN)
+- CV: `https://portfolio-me-f104.vercel.app/cv/Agustin-Delgado-2026.pdf` (fuente canónica única; mismo archivo para ES y EN)
 - Contacto: `mailto:augusto.delgado00@hotmail.com`
 
 ## Videos

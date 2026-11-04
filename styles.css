@@ -13,6 +13,7 @@
   --gold: #c99a4c;
   --gold-soft: #e7cf9c;
   --gold-ink: #2a1f0d;
+  --gold-deep: #836027;
   --radius: 24px;
   --shadow: 0 18px 60px rgba(20, 26, 22, 0.1);
   --max: 1180px;
@@ -195,7 +196,7 @@ img { max-width: 100%; }
   letter-spacing: .12em;
   font-size: .74rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--gold-deep);
 }
 .band-dark .section-marker { color: var(--gold-soft); }
 
