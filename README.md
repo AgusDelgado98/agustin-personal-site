@@ -27,11 +27,13 @@ Diseño editorial (verde profundo, grafito, marfil y acentos dorados) organizado
 
 Todos con SVG nativo (sin librerías):
 
-1. **Hero — campo de puntos**: un campo abstracto y sutil detrás del hero que reacciona levemente al puntero (sin física, sin ruido visual). Se omite por completo con `prefers-reduced-motion`.
-2. **Mi recorrido** (Inicio): una transición visual única (no tarjetas) que representa Operaciones → Analítica de datos → Ciencia de Datos e IA como un cambio de carácter en la distribución de puntos.
+1. **Hero — campo de puntos**: la trama cubre todo el hero y el puntero destaca hasta tres puntos cercanos. El fondo es estático en pantallas táctiles y con `prefers-reduced-motion`.
+2. **Mi recorrido** (Inicio): una transición visual que representa Operaciones → Analítica de datos → Ciencia de Datos e IA → Desarrollo de software mediante una distribución de puntos. Cada etapa resalta sus conexiones al pasar el cursor, recibir el foco o tocar su título.
 3. **Intereses y pensamiento**: cinco ideas (Problemas reales, Experimentación, Modelado, IA con propósito, Impacto) en una lista accesible con panel de detalle y una constelación decorativa de fondo. Al pasar el mouse, enfocar con teclado o tocar en móvil, se revela una frase breve.
 
 Ninguno de estos elementos representa datos medidos reales — son abstracciones conceptuales.
+
+En Inicio, el mapa de conocimientos muestra cómo se conectan cinco disciplinas. Las tarjetas de aplicaciones muestran sus disciplinas al pasar el cursor o activar el botón «Disciplinas». Los enlaces a las fichas se pueden usar por separado.
 
 ## Accesibilidad
 
@@ -40,7 +42,7 @@ Ninguno de estos elementos representa datos medidos reales — son abstracciones
 - Menú móvil con `aria-expanded`, cierre con `Escape` y al hacer click afuera.
 - Al cambiar de vista, el foco se mueve al `<h1>` de la vista (con `tabindex="-1"`) y el nav marca `aria-current="page"` en el enlace activo.
 - Enlaces reales (LinkedIn, Portfolio, GitHub, CV, contacto) son `<a>` nativos, alcanzables por teclado.
-- `prefers-reduced-motion` desactiva el campo de puntos del hero y el trazado animado de "Mi recorrido".
+- `prefers-reduced-motion` desactiva las reacciones del fondo del hero y el trazado animado de "Mi recorrido".
 - Foco visible global vía `:focus-visible`. SVGs puramente decorativos llevan `aria-hidden="true"`.
 
 ## Rutas de producción
@@ -60,10 +62,10 @@ Los videos de la versión anterior (introducción + mini entrevista) fueron reti
 Desde esta carpeta, con cualquier servidor estático:
 
 ```bash
-python -m http.server 8080
+python -m http.server 8765 --bind 127.0.0.1
 ```
 
-Luego abrir `http://localhost:8080`.
+Luego abrir `http://127.0.0.1:8765/`.
 
 ## Despliegue
 
